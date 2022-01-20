@@ -25,7 +25,7 @@ function log_ip($filename){
         $location = "Unknown Location";
     }
 
-    $fp = fopen($filename, 'a');
+    $fp = fopen(__DIR__.$filename, 'a');
     fwrite($fp,"\n\n==========".date(DATE_RFC2822)."==========");
     fwrite($fp,"\nDirect IP: ".$raw_ip);
     fwrite($fp,"\nDeduced IP: ".$ip);
